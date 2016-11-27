@@ -1,0 +1,332 @@
+
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<!--
+		<script src="https://s3.amazonaws.com/remoats/scripts/github/remotes.ne.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+		    new Remotes("preview")
+		    .on("swipe-left", function(e){
+					Reveal.navigateRight();
+		         })
+			.on("swipe-right", function(e){
+					Reveal.navigateLeft();
+		         })
+			.on("swipe-up", function(e){
+					Reveal.navigateDown();
+		         })
+			.on("swipe-down", function(e){
+					Reveal.navigateUp();
+		         })
+			.on("tap", function(e){
+		            /* and the screen explodes */
+		         })
+			.on("hold", function(e){
+		            /* hold on */
+		         })
+			.on("release", function(e){
+		            /* hands off */
+		         });
+		</script>
+		-->
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown
+				    data-separator="\n---\n$"
+				    data-vertical="\n--\n">
+				    <script type="text/template">
+
+## 開発環境 on Linux
+　
+### by tsutsu
+
+---
+
+### Linuxでの開発環境
+
+<br>
+
+Windowsで開発をしてきたプログラマでも
+
+使えそうなLinuxでの開発環境が整いました
+
+--
+
+### これがほしい
+
+<br>
+
+* ターミナル＆シェル
+* プログラミング用エディタ
+* Gitクライアント
+
+---
+
+### ターミナル＆シェル
+
+<br>
+
+とりあえずこのあたりを使っていますが
+
+Windowsではあまりターミナルは使わないので
+
+あまりこだわりがない．．．（勉強中）
+
+<br>
+
+terminator，zsh，tmux
+
+--
+
+### 最低限の操作と見た目
+
+<br>
+
+タブやペインの移動，プロンプトをかっこよく
+
+![image](image/image01.png)
+
+--
+
+### ビルドエラーも見やすく
+
+<br>
+
+これをやるまで正直つらかった．．．
+
+![image](image/image02.png)
+
+---
+
+### プログラミング用エディタ
+
+<br>
+
+* 見た目がかっこいいのがいい
+* できるだけ入力補完が効いてほしい
+* C/C++でのシンボルの検索，ジャンプがしたい
+* Go Back機能がほしい
+* 複数言語への対応が手軽にできてほしい
+* できれば慣れたキーバインドで
+* できればWindowsでも同じものを使いたい
+
+--
+
+### 候補のエディタ
+
+<br>
+
+* Visual Studio Code ★
+* Atom
+* Sublime Text 3
+* Emacs
+
+--
+
+### AtomからVS Codeに乗り換えた理由
+
+<br>
+
+* シンボルの検索機能が強力（Go Backも）
+* 日本語表示が整理された（中華フォント対策）
+* デザインが好き（慣れ親しんだテーマ）
+* 拡張だけでなく標準の機能もしっかりしている
+* 起動が軽い
+* 拡張機能（対応言語）が充実してきた
+
+--
+
+### コマンドパレット
+
+<br>
+
+ショートカットキーをはじめから覚えなくてもOK
+
+![image](image/image03.png)
+
+--
+
+### 定義のチラ見機能
+
+<br>
+
+本家のVisual Studioにも欲しい機能
+
+![image](image/image04.png)
+
+--
+
+### ステップ実行も
+
+<br>
+
+変数のウォッチやコールスタック
+
+![image](image/image05.png)
+
+--
+
+### 一応スクリーンエディタも
+
+<br>
+
+Emacsもそれなりに環境を作っています
+
+![image](image/image06.png)
+
+---
+
+### Gitクライアント
+
+<br>
+
+* 現在の更新ファイル一覧がわかりやすく見たい
+ * 更新ファイル一覧から更新内容が見たい
+ * ファイル，行単位でのステージをしたい
+* コミット履歴がわかりやすく見たい
+ * 各コミットの更新ファイルの一覧が見たい
+ * 更新ファイル一覧から変更内容が見たい
+ * コミット履歴からいろいろな操作がしたい  
+ブランチ操作，チェリーピック，リベース，リバート
+* 見た目がかっこいいのがいい
+
+--
+
+### 候補のGitクライアント
+
+<br>
+
+* GitKraken ★
+* Magit（Emacs）
+* tig
+* git-cola
+
+--
+
+### コミット履歴
+
+<br>
+
+見やすいコミット履歴
+
+![image](image/image07.png)
+
+--
+
+### 各コミットの更新内容
+
+<br>
+
+コミット履歴からファイルの更新内容を表示
+
+![image](image/image08.png)
+
+--
+
+### 現在の更新内容
+
+<br>
+
+行単位のステージも
+
+![image](image/image09.png)
+
+---
+
+### VS Code・Atom・GitKrakenは
+### Electronでつくられています
+
+--
+
+### Windows・Mac・Linuxで
+### 同じように使うことができます
+
+---
+
+## Thank U for Reading
+　
+### by tsutsu
+
+				    </script>
+				</sectin>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
